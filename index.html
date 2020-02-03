@@ -25,8 +25,31 @@
           <li><a href="company.html">О Компании</a></li>
         </ul>
         <ul>
-          <li>Поиск</li>
-          <li>Вход</li>
+          <li>Поиск
+          <!-- Всплывающее окно -->
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <label class="visually-hidden" for="user-search">Найти</label>
+              <input id="user-search" type="text" name="searching" placeholder="Крем-брюле">
+            </form>
+          </li>
+          <li>Вход
+          <!-- Всплывающее окно -->
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <p>
+                <label class="visually-hidden" for="user-login">Логин</label>
+                <input id="user-login" type="email" name="login" placeholder="email@example.com">
+              </p>
+              <p>
+                <label class="visually-hidden" for="user-password">Пароль</label>
+                <input id="user-password" type="password" name="password" placeholder="••••••••">
+              </p>
+              <p>
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>
+              </p>
+              <button type="submit">Войти</button>
+            </form>
+          </li>  
           <li><a href="order.html">Пусто</a></li>
         </ul>
       </nav>
@@ -152,7 +175,7 @@
         <section>
             <h2 class="visually-hidden">Подписка на рассылку</h2>
             <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-            <form action="https://echo.htmlacademy.ru" method="POST">
+            <form action="https://echo.htmlacademy.ru" method="post">
               <label class="visually-hidden" for="subscribe-email">E-mail</label>
               <input id="subscribe-email" type="email" name="subscribe" placeholder="email@example.com">
               <button type="submit">Отправить</button>
@@ -198,37 +221,11 @@
       </div>
     </footer>
 
-    <!-- Всплывающие окна -->
-    <section>
-      <h2 class="visually-hidden">Поиск</h2>
-      <form action="https://echo.htmlacademy.ru" method="POST">
-        <label class="visually-hidden" for="user-search">Найти</label>
-        <input id="user-search" type="text" name="searching" placeholder="Крем-брюле">
-        <button class="visually-hidden" type="submit">Отправить</button>
-      </form>
-    </section>
-
-    <section>
-      <h2 class="visually-hidden">Вход</h2>
-      <form action="https://echo.htmlacademy.ru" method="POST">
-        <p>
-          <label class="visually-hidden" for="user-login">Логин</label>
-          <input id="user-login" type="email" name="login" placeholder="email@example.com">
-        </p>
-        <p>
-          <label class="visually-hidden" for="user-password">Пароль</label>
-          <input id="user-password" type="password" name="password" placeholder="••••••••">
-        </p>
-        <p><a href="#">Забыли пароль?</a></p>
-        <p><a href="#">Новая регистрация</a></p>
-        <button type="submit">Войти</button>
-      </form>
-    </section>
-    
+    <!-- Модальное окно -->
     <section>
       <h2 class="visually-hidden">Обратная связь</h2>
       <p>Мы обязательно вам ответим!</p>
-      <form action="https://echo.htmlacademy.ru" method="POST">
+      <form action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label class="visually-hidden" for="user-name">Имя</label>
           <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
@@ -247,6 +244,5 @@
       </form>
       <button type="button">Закрыть</button>
     </section>
-
   </body>
 </html>
