@@ -52,33 +52,32 @@
           </li>
           <li><a href="order.html">2 товара</a>
           <!-- Всплывающее окно -->
-            <section>
-              <h2 class="visually-hidden">Товары в корзине</h2>
-              <table>
-                <tr>
-                  <td>Удалить</td>
-                  <td>
-                    <img src="img/product-1.jpg" width="33" height="33" alt="Мороженое с апельсиновым джемом и цитрусовой стружкой">  
-                    Пломбир с апельсиновым джемом
-                  </td>
-                  <td>1,5 кг х <span>200 руб.</span></td>
-                  <td>300 руб.</td>
-                </tr>
-                <tr>
-                  <td>Удалить</td>
-                  <td>
-                    <img src="img/product-3.jpg" width="33" height="33" alt="Клубничное мороженое с присыпкой из белого шоколада">  
-                    Клубничный пломбир с присыпкой из белого шоколада
-                  </td>
-                  <td>1,5 кг х <span>300 руб.</span></td>
-                  <td>450 руб.</td>
-                </tr>
-                <tr>
-                  <td colspan="4">Итого: 750 руб.</td>   
-                </tr>
-              </table>
-              <a href="order.html">Оформить заказ</a>
-            </section>
+              <div>
+                <table>
+                  <tr>
+                    <td>Удалить</td>
+                    <td>
+                      <img src="img/product-1.jpg" width="33" height="33" alt="Мороженое с апельсиновым джемом и цитрусовой стружкой">  
+                      Пломбир с апельсиновым джемом
+                    </td>
+                    <td>1,5 кг х <span>200 руб.</span></td>
+                    <td>300 руб.</td>
+                  </tr>
+                  <tr>
+                    <td>Удалить</td>
+                    <td>
+                      <img src="img/product-3.jpg" width="33" height="33" alt="Клубничное мороженое с присыпкой из белого шоколада">  
+                      Клубничный пломбир с присыпкой из белого шоколада
+                    </td>
+                    <td>1,5 кг х <span>300 руб.</span></td>
+                    <td>450 руб.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="4">Итого: 750 руб.</td>   
+                  </tr>
+                </table>
+                <a href="order.html">Оформить заказ</a>
+              </div>
           </li> 
         </ul>
       </nav>
@@ -100,7 +99,68 @@
 
         <section>
             <h2 class="visually-hidden">Фильтр</h2>
-            <!-- Здесь будет форма -->
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <fieldset>
+                  <legend>Сортировка:</legend>
+                  <select name="sorting">
+                      <option value="popular">по популярности</option>
+                      <option value="cheap">сначала недорогие</option>
+                      <option value="expensive">сначала дорогие</option>
+                      <option value="fat">по жирности</option>
+                    </select>
+              </fieldset>    
+              <fieldset>
+                  <legend>Цена: 100 руб. – 500 руб.:</legend>
+                <!-- Здесь будет шкала цены -->
+              </fieldset>
+              <fieldset>
+                <legend>Жирность:</legend>
+                <ul>
+                  <li>
+                    <input type="radio" name="fatness" value="null" id="filter-null">
+                    <label for="filter-null">0%</label>
+                  </li>
+                  <li>
+                      <input type="radio" name="fatness" value="lessthan10" id="filter-lessthan10" checked>
+                      <label for="filter-lessthan10">до 10%</label>
+                  </li>
+                  <li>
+                      <input type="radio" name="fatness" value="lessthan30" id="filter-lessthan30">
+                      <label for="filter-lessthan30">до 30%</label>
+                  </li>
+                  <li>
+                      <input type="radio" name="fatness" value="morethan30" id="filter-morethan30">
+                      <label for="filter-morethan30">выше 30%</label>
+                  </li>
+                </ul>
+              </fieldset> 
+              <fieldset>
+                <legend>Наполнители:</legend>
+                <ul>
+                  <li>
+                    <input type="checkbox" name="chocolate" id="filter-chocolate" checked>
+                    <label for="filter-chocolate">шоколадные</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="sugar" id="filter-sugar" checked>
+                    <label for="filter-sugar">сахарные присыпки</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="fruits" id="filter-fruits">
+                    <label for="filter-fruits">фрукты</label>
+                  </li>
+                  <li>
+                      <input type="checkbox" name="syrups" id="filter-syrups">
+                      <label for="filter-syrups">сиропы</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="jams" id="filter-jams">
+                    <label for="filter-jams">джемы</label>
+                  </li>
+                </ul>
+              </fieldset>   
+              <button type="submit">Применить</button>
+            </form>
         </section>
 
         <section>
