@@ -1,0 +1,371 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+
+  background-color: #849d8f;
+}
+
+/* Ссылки и кнопки */
+
+a {
+  text-decoration: none;
+}
+
+ .link {
+  font-weight: 500;
+  line-height: 18px;
+  color: #ffffff;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+ }
+
+.link:hover,
+.link:focus,
+.link:active {
+  color: #ffbc9e;
+
+  border-bottom: 1px solid rgba(249, 172, 159, 0.3);
+}
+
+.button {
+  font: inherit;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+  box-shadow: 0px 2px 2px 0 var(--deep-red-64);
+  border-radius: 10px;
+}
+
+.button:hover,
+.button:focus {
+  color: #fefefe;
+  
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
+  box-shadow: 0px 2px 2px 0 #ac1000;
+}
+
+.button:active {
+  color: #fceeec;
+  
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to top, #e74a35, #f26843);
+  box-shadow: inset 0px 2px 2px 0 #942718;
+}
+
+/* Формы */
+
+.form > input {
+  font: inherit;
+  line-height: 24px;
+  font-weight: 700;
+  color: #323232;
+  
+  background-color: #ffffff;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  border-radius: 5px;
+}
+
+.form > input::placeholder {
+  font-weight: normal;
+  color: #999999;
+}
+
+.form > input:hover {
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.form > input:focus {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+}
+
+/* Хедер */
+
+.site-menu,
+.user-menu {
+  list-style: none;
+}
+
+.site-menu a,
+.user-menu a {
+  color: #ffffff;
+}
+
+.site-menu a {
+  font-weight: 700;  
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle; 
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.site-menu a:hover,
+.site-menu a:focus {
+  color: #333333;
+  
+  background-color: #f7f6f3;
+  border-bottom: none;
+}
+
+.site-menu a:active {
+  color: #323232;
+
+  background-color: #ededed;
+  box-shadow: inset 0px 2px 1px 0 #696969;
+  border-bottom: none;
+}
+
+.site-menu-current {
+  background-color: #d07058;
+  border-bottom: none;
+}
+
+.user-menu li {
+  display: inline-block;
+
+  font-size: 14px;  
+  font-weight: 500;  
+  line-height: 16px;  
+  text-align: center;
+  vertical-align: middle;   
+  
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.user-menu-search:hover,
+.user-menu-search:focus,
+.user-menu-entrance:hover,
+.user-menu-entrance:focus {
+  color: #323232;
+
+  background-color: #f8f7f4;
+}
+
+li.user-menu-basket-full {
+  color: #323232;
+
+  background-color: #f8f7f4;
+}
+
+li.user-menu-basket-full a {
+  color: #323232;
+}
+
+.site-header-information p {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.site-header-information a {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+/* Хлебные крошки */
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a,
+.breadcrumbs-current {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 16px;
+}
+
+/* Заголовок страницы */
+
+.page-title {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 41px;
+}
+
+/* Хиты продаж / Виды мороженого */
+
+.product-list {
+  list-style: none;
+}
+
+.product-list h3 {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.product-img {
+  border-radius: 50%;
+}
+
+.product-price {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 45px;
+  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+}
+
+.product-price-unit {
+  font-size: 30px;
+}
+
+.product-button {
+  display: none;
+
+  font-size: 18px;
+  line-height: 24px;
+  color: #fefefe;
+}
+
+.product-item:hover {
+background-color: rgba(248, 247, 244, 0.2)
+}
+
+.product-item:hover .product-button {
+  display: inline-block;
+}
+
+/* Преимущества */
+
+.features {
+  color: #323232;
+
+  background-color: #ebdfc5;
+  background-image: url(../img/index-wafbackground.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.features p {
+  font-size: 24px;
+  font-weight: 500; 
+  line-height: 30px;
+}
+
+.features-list {
+  list-style: none;
+}
+
+/* Новое в нашем блоге */
+
+.blog-news {
+  color: #323232;
+
+  background-color: #ffffff;
+  background-image: url(../img/index-icebackground.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.blog-news h2 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.blog-news-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #323232;
+  
+  border-bottom: 2px solid #323232;
+}
+
+.blog-news-title:hover,
+.blog-news-title:focus,
+.blog-news-title:active {
+  color: #e84d37;
+
+  border-bottom: 2px solid rgba(236, 89, 60, 0.3);
+}
+
+/* Подписка на рассылку */
+
+.subscribe {
+color: #5a5a5a;
+
+background-color: #f8f7f4;
+}
+
+.subscribe-button {
+  font-size: 18px;
+  line-height: 24px;
+  color: #fefefe;
+}
+
+/* Футер */
+
+.footer-social,
+.footer-links {
+  list-style: none;
+}
+
+.social-button {
+  text-align: center;
+  color: #849d8f;
+  vertical-align: middle;
+
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: #ffffff;
+  border: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.social-button:active {
+  background-color: #e9e9e9;
+  border: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.footer-links a {
+  font-size: 13px;
+  font-weight: normal;
+}
+
+a.important-link {
+  font-weight: 700;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  line-height: 18px;
+  color: #fefefe;
+}
+
+.footer-copyright a {
+  font-size: 12px;
+  font-weight: normal;
+  color: #fefefe;
+}
+
+/* Скрытые окна и заголовки */
+
+.site-menu-submenu,
+.pop-up {
+  display: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
