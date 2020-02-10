@@ -42,7 +42,7 @@ a {
   vertical-align: middle;
 
   background-image: linear-gradient(to top, #e74a35, #f26843);
-  box-shadow: 0px 2px 2px 0 var(--deep-red-64);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
   border-radius: 20px;
   border: none;
 }
@@ -356,7 +356,6 @@ background-color: rgba(248, 247, 244, 0.2)
   background-image: url(../img/icon-hit.svg);
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 50%;
 }
 
 /* Преимущества */
@@ -507,7 +506,6 @@ background-color: #f8f7f4;
 
 .filter-sorting select {
   font: inherit;
-  font-size: 16px;
   font-weight: 500;
   line-height: 18px;
 
@@ -532,7 +530,6 @@ background-color: #f8f7f4;
   display: inline-block;
   
   font: inherit;
-  font-size: 16px;
   font-weight: 500;
   line-height: 18px;
   text-align: center;
@@ -571,7 +568,7 @@ background-color: #f8f7f4;
   height: 26px;
   text-align: center;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 26px;
   vertical-align: middle;
   
   color: #ffffff;
