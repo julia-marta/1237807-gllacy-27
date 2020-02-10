@@ -14,18 +14,18 @@
       </a>
       <nav class="site-navigation">
         <ul class="site-menu">
-          <li><a href="">Каталог</a>
+          <li><a class="site-menu-item" href="">Каталог</a>
           <!-- Выпадающий список подменю -->
             <ul class="site-menu-submenu">
-              <li>Новинки</li>
-              <li><a href="catalog.html">Сливочное</a></li>
-              <li><a href="#">Щербеты</a></li>
-              <li><a href="#">Фруктовый лед</a></li>
-              <li><a href="#">Мелорин</a></li>
+              <li class="site-menu-submenu-title">Новинки</li>
+              <li class="site-menu-submenu-item"><a href="catalog.html">Сливочное</a></li>
+              <li class="site-menu-submenu-item"><a href="#">Щербеты</a></li>
+              <li class="site-menu-submenu-item"><a href="#">Фруктовый лед</a></li>
+              <li class="site-menu-submenu-item"><a href="#">Мелорин</a></li>
             </ul>
           </li>
-          <li><a href="delivery.html">Доставка и оплата</a></li>
-          <li><a href="company.html">О Компании</a></li>
+          <li><a class="site-menu-item" href="delivery.html">Доставка и оплата</a></li>
+          <li><a class="site-menu-item" href="company.html">О Компании</a></li>
         </ul>
         <ul class="user-menu">
           <li class="user-menu-search">Поиск
@@ -69,76 +69,75 @@
           <h2 class="visually-hidden">Слайдер с видами мороженого</h2>
           <div class="slide slide1">
             <h3>Крем-брюле и пломбир с малиновым джемом</h3>
-            <img src="img/slide1-ice-cream.png" width="647" height="584" alt="Крем-брюле и пломбир с малиновым джемом">
-            <a class="button" href="#">Давайте оба!</a>
-            <ul>
-              <li><a>1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-            </ul>
+            <img src="img/slide1-ice-cream.png" width="647" height="584" alt="Мороженое крем-брюле и с малиновым джемом в вафельных рожках">
+            <a class="button slider-button" href="#">Давайте оба!</a>
           </div>
           <div class="slide slide2"><!-- Скрытый слайд -->
             <h3>Шоколадный пломбир и лимонный сорбет</h3>
-            <img src="img/slide2-ice-cream.png" width="644" height="582" alt="Шоколадный пломбир и лимонный сорбет">
-            <a class="button" href="#">Давайте оба!</a>
-            <ul>
-              <li><a href="#">1</a></li>
-              <li><a>2</a></li>
-              <li><a href="#">3</a></li>
-            </ul>
+            <img src="img/slide2-ice-cream.png" width="644" height="582" alt="Шоколадное мороженое и лимонный сорбет в вафельных рожках">
+            <a class="button slider-button" href="#">Давайте оба!</a>
           </div>
           <div class="slide slide3"><!-- Скрытый слайд -->
             <h3>Пломбир с помадкой и клубничный щербет</h3>
-            <img src="img/slide3-ice-cream.png" width="639" height="582" alt="Пломбир с помадкой и клубничный щербет">
-            <a class="button" href="#">Давайте оба!</a>
-            <ul>
-              <li><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a>3</a></li>
-            </ul>
+            <img src="img/slide3-ice-cream.png" width="639" height="582" alt="Мороженое с помадкой и клубничный щербет в вафельных рожках">
+            <a class="button slider-button" href="#">Давайте оба!</a>
+          </div>
+          <div class="slider-controls">
+              <ul class="slider-toggle">
+                  <li>
+                    <input type="radio" name="toggle" id="btn-1">
+                    <label class="slider-toggle-btn" for="btn-1"></label>
+                  </li>
+                  <li>
+                      <input type="radio" name="toggle" id="btn-2">
+                      <label class="slider-toggle-btn" for="btn-2"></label>
+                  </li>
+                  <li>
+                      <input type="radio" name="toggle" id="btn-3">
+                      <label class="slider-toggle-btn" for="btn-3"></label>
+                  </li>
+                </ul>
           </div>
        </section>
 
         <section class="promo">
           <h2 class="visually-hidden">Рекламные акции</h2>
           <div class="promo-raspberry">
-            <!-- Фоновое изображение -->
             <h3>Малинка даром!</h3>
             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <a class="button" href="#">Хочу варенье!</a>
+            <a class="button promo-button" href="#">Хочу варенье!</a>
           </div>
           <div class="promo-chocolate">
-            <!-- Фоновое изображение -->
             <h3>Шоколадки даром!</h3>
             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-            <a class="button" href="#">Хочу шоколадки!</a>
+            <a class="button promo-button" href="#">Хочу шоколадки!</a>
           </div>
         </section>
 
        <section class="hits">
           <h2 class="visually-hidden">Хиты продаж</h2>
           <ul class="product-list">
-              <li class="product-item">
+              <li class="product-item product-hit">
                   <h3><a class="link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
-                  <img class="product-img" src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                  <img class="product-img" src="img/product-1.jpg" width="267" height="267" alt="Мороженое с апельсиновым джемом и цитрусовой стружкой">
                   <p class="product-price">310 ₽/<span class="product-price-unit">кг</span></p>
                   <a class="button product-button" href="#">Быстрый просмотр</a>
               </li>
-              <li class="product-item">
+              <li class="product-item product-hit">
                   <h3><a class="link" href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
-                  <img class="product-img" src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+                  <img class="product-img" src="img/product-2.jpg" width="267" height="267" alt="Кофейное мороженое с кусочками шоколада">
                   <p class="product-price">380 ₽/<span class="product-price-unit">кг</span></p>
                   <a class="button product-button" href="#">Быстрый просмотр</a>
               </li>
-              <li class="product-item">
+              <li class="product-item product-hit">
                   <h3><a class="link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
-                  <img class="product-img" src="img/product-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                  <img class="product-img" src="img/product-3.jpg" width="267" height="267" alt="Клубничное мороженое с присыпкой из белого шоколада">
                   <p class="product-price">355 ₽/<span class="product-price-unit">кг</span></p>
                   <a class="button product-button" href="#">Быстрый просмотр</a>
               </li>
-              <li class="product-item">
+              <li class="product-item product-hit">
                   <h3><a class="link" href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
-                  <img class="product-img" src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+                  <img class="product-img" src="img/product-4.jpg" width="267" height="267" alt="Мороженое крем-брюле с карамельной подливкой">
                   <p class="product-price">415 ₽/<span class="product-price-unit">кг</span></p>
                   <a class="button product-button" href="#">Быстрый просмотр</a>
               </li>
@@ -181,28 +180,28 @@
         
         <section class="contacts">
           <h2 class="visually-hidden">Карта проезда и контактная информация</h2>
-          <img src="img/map.jpg" width="1200" height="430" alt="Офис и офлайн-магазин по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-           <div>
+          <img class="contacts-map" src="img/map.jpg" width="1200" height="430" alt="Офис и офлайн-магазин по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+           <div class="contacts-information">
               <p>
                 Адрес главного офиса и офлайн-магазина:
-                <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+                <span class="contacts-information-adress">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
               </p>
               <p>
                 Для заказов по телефону:
-                <a href="tel:+78124502525">8 812 450-25-25</a>
+                <a class="contacts-information-phone" href="tel:+78124502525">8 812 450-25-25</a>
                 (с 10 до 20 ежедневно)
               </p>
-              <button class="button" type="button">Форма обратной связи</button>
+              <button class="button feedback-button" type="button">Форма обратной связи</button>
           </div>
         </section>  
     </main>
 
     <footer class="site-footer">
       <ul class="footer-social">
-        <li><a class="social-button" href="#">Твиттер</a></li>
-        <li><a class="social-button" href="#">Инстаграм</a></li>
-        <li><a class="social-button" href="#">Фейсбук</a></li>
-        <li><a class="social-button" href="#">Вконтакте</a></li>
+        <li><a class="social-button twitter-button" href="#">Твиттер</a></li>
+        <li><a class="social-button instagram-button" href="#">Инстаграм</a></li>
+        <li><a class="social-button facebook-button" href="#">Фейсбук</a></li>
+        <li><a class="social-button vkontakte-button" href="#">Вконтакте</a></li>
       </ul>
       <ul class="footer-links">
         <li><a class="link important-link" href="#">Для поставщиков</a></li>
