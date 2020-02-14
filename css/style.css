@@ -88,11 +88,49 @@ a {
   border: 2px solid rgba(46, 136, 228, 0.52);
 }
 
+/* Центровщик */
+
+.container {
+  width: 1146px;
+  margin: 0 auto;
+
+  /* Временно для сетки */
+  outline: 2px solid crimson;
+}
+
 /* Хедер */
+
+.site-header {
+  display: flex;
+  position: relative;
+  margin-top: 9px;
+  margin-bottom: 10px;
+
+  /* Временно для сетки */
+  outline: 2px solid fuchsia;
+}
+
+.site-header-logo {
+  width: 154px;
+  height: 64px;
+
+   /* Временно для сетки */
+   outline: 2px solid fuchsia;
+}
+
+.site-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+   /* Временно для сетки */
+   outline: 2px solid fuchsia;
+}
 
 .site-menu,
 .user-menu {
   list-style: none;
+  padding: 0;
 }
 
 .site-menu a,
@@ -100,8 +138,27 @@ a {
   color: #ffffff;
 }
 
+.site-menu {
+ display: flex;
+ 
+ width: 375px;
+ margin: 0;
+ margin-top: 13px;
+ margin-left: 10px;
+ padding: 0;
+
+ /* Временно для сетки */
+ outline: 2px solid fuchsia;
+}
+
 .site-menu-item {
   display: inline-block;
+  margin: 0;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 14px;
+  padding-right: 13px;
+
   font-weight: 700;  
   line-height: 18px;
   text-align: center;
@@ -116,6 +173,7 @@ a {
   
   background-color: #f7f6f3;
   border-bottom: none;
+  border-radius: 20px;
 }
 
 .site-menu-item:active {
@@ -129,11 +187,13 @@ a {
 .site-menu-current {
   background-color: #d07058;
   border-bottom: none;
+  border-radius: 20px;
 }
 
 .site-menu-submenu {
   display: inline-block;
 
+  padding: 0;
   list-style: none;
   font-size: 14px;
   line-height: 16px;
@@ -170,8 +230,23 @@ a {
   color: #ffffff;
 }
 
-.user-menu li {
+.user-menu {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 14px;
+  width: 263px;
+
+  /* Временно для сетки */
+  outline: 2px solid fuchsia;
+}
+
+.user-menu-item,
+.user-menu-basket {
   display: inline-block;
+
+  height: 17px;
+  padding-top: 7px;
+  padding-bottom: 8px;
 
   font-size: 14px;  
   font-weight: 500;  
@@ -182,6 +257,23 @@ a {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.user-menu-search {
+  width: 33px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-menu-entrance {
+  margin-right: 9px;
+}
+
+.user-menu-entrance,
+.user-menu-basket {
+  padding-right: 17px;
+  padding-left: 45px;
+  border-radius: 20px;
+}
+
 .user-menu-search:hover,
 .user-menu-search:focus,
 .user-menu-entrance:hover,
@@ -189,19 +281,66 @@ a {
   color: #323232;
 
   background-color: #f8f7f4;
+  cursor: pointer;
 }
 
-li.user-menu-basket-full {
+.user-menu-basket {
+  position: relative;
+}
+
+.user-menu-basket::before {
+  content: "";
+
+  position: absolute;
+  top: 6px;
+  left: 16px;
+
+  width: 21px;
+  height: 20px;
+
+  background-image: url(../img/icon-basket.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+a.user-menu-basket-full {
+  padding-right: 16px;
+  padding-left: 44px;
+
   color: #323232;
 
   background-color: #f8f7f4;
 }
 
-li.user-menu-basket-full a {
-  color: #323232;
+.user-menu-basket-full::before {
+  content: "";
+
+  position: absolute;
+  top: 6px;
+  left: 16px;
+
+  width: 21px;
+  height: 20px;
+
+  background-image: url(../img/icon-basketfull.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.site-header-information {
+  position: absolute;
+  top: 63px;
+  right: 0px;
+  text-align: right;
+
+  /* Временно для сетки */
+  outline: 2px solid fuchsia;
 }
 
 .site-header-information p {
+  margin: 0;
+  margin-bottom: 5px;
+
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
@@ -211,6 +350,7 @@ li.user-menu-basket-full a {
   font-size: 22px;
   font-weight: 700;
   line-height: 24px;
+ 
   color: #ffffff;
 }
 
@@ -305,11 +445,33 @@ li.user-menu-basket-full a {
 
 /* Хиты продаж / Виды мороженого */
 
+.hits,
+.products {
+  width: 1172px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
 .product-list {
+  display: flex;
+  flex-wrap: wrap;
+  
+  margin: 0;
+  padding: 0;
   list-style: none;
+
+  /* Временно для сетки */
+  outline: 2px solid yellow;
 }
 
 .product-list h3 {
+  order: 3;
+  width: 256px;
+
+  margin: 0;
+  margin-top: 12px;
+  padding: 0;
+
   font-size: 16px;
   line-height: 22px;
   text-align: center;
@@ -320,6 +482,13 @@ li.user-menu-basket-full a {
 }
 
 .product-price {
+  position: absolute;
+  top: 215px;
+  left: 11px;
+
+  margin: 0;
+  padding: 0;
+
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
@@ -327,15 +496,34 @@ li.user-menu-basket-full a {
 }
 
 .product-price-unit {
+  margin: 0;
+  padding: 0;
+
   font-size: 30px;
 }
 
 .product-button {
+  order: 4;
   display: none;
+  padding: 10px 17px;
 
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+  width: 293px;
+  padding-top: 6px;
+  padding-bottom: 34px;
+
+  /* Временно для сетки */
+  outline: 2px solid yellow;
 }
 
 .product-item:hover {
@@ -347,12 +535,15 @@ background-color: rgba(248, 247, 244, 0.2)
 }
 
 .product-hit::before {
+  position: absolute;
   content: "";
+  top: 6px;
+  left: 12px;
+
   display: block;
   width: 61px;
   height: 61px;
 
-  background-color: #ffffff;
   background-image: url(../img/icon-hit.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -361,22 +552,148 @@ background-color: rgba(248, 247, 244, 0.2)
 /* Преимущества */
 
 .features {
+  min-height: 267px;
+  margin-top: 5px;
+  margin-bottom: 40px;
+
+  padding-top: 25px;
+  padding-left: 21px;
+  padding-right: 30px;
+  padding-bottom: 14px;
+
   color: #323232;
 
   background-color: #ebdfc5;
   background-image: url(../img/index-wafbackground.jpg);
   background-position: center;
   background-repeat: no-repeat;
+
+  border-radius: 15px;
+
+  /* Временно для сетки */
+  outline: 2px solid aqua;
 }
 
-.features p {
+.features-title {
+  margin: 0;
+  margin-bottom: 9px;
+
   font-size: 24px;
   font-weight: 500; 
   line-height: 30px;
+
+  /* Временно для сетки */
+  outline: 2px solid aqua;
 }
 
 .features-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  max-height: 213px;
+
+  margin: 0;
+  padding: 0;
+  
   list-style: none;
+
+  /* Временно для сетки */
+  outline: 2px solid aqua;
+}
+
+.feature-item {
+  position: relative;
+  width: 478px;
+  margin-bottom: 13px;
+  margin-right: 30px;
+  padding-top: 11px;
+  padding-left: 55px;
+
+  /* Временно для сетки */
+  outline: 2px solid aqua;
+}
+
+.feature-item-icecream::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 49px;
+  height: 49px;
+
+  background-image: url(../img/icon-icecream.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.feature-item-leaf::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 49px;
+  height: 49px;
+
+  background-image: url(../img/icon-leaf.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.feature-item-cow::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 49px;
+  height: 49px;
+
+  background-image: url(../img/icon-cow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.feature-item-therm::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 49px;
+  height: 49px;
+
+  background-image: url(../img/icon-therm.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Колонки */
+
+.index-columns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+/* Временно для сетки */
+outline: 2px solid chartreuse;
+}
+
+.blog-news,
+.subscribe {
+  width: 560px;
+  min-height: 220px;
+
+  border-radius: 15px;
+
+/* Временно для сетки */
+  outline: 2px solid chartreuse;
 }
 
 /* Новое в нашем блоге */
@@ -391,18 +708,25 @@ background-color: rgba(248, 247, 244, 0.2)
 }
 
 .blog-news h2 {
+  margin: 0;
+  margin-top: 23px;
+  margin-left: 20px;
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
 }
 
 .blog-news-title {
+  display: inline-block;
+  width: 281px;
+  margin-top: 4px;
+  margin-left: 20px;
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
+  text-decoration: underline;
   color: #323232;
   
-  border-bottom: 2px solid rgba(50, 50, 50, 0.3);
 }
 
 .blog-news-title:hover,
@@ -410,15 +734,39 @@ background-color: rgba(248, 247, 244, 0.2)
 .blog-news-title:active {
   color: #e84d37;
 
-  border-bottom: 2px solid rgba(236, 89, 60, 0.3);
 }
 
 /* Подписка на рассылку */
 
 .subscribe {
-color: #5a5a5a;
+  color: #5a5a5a;
 
-background-color: #f8f7f4;
+  /* Временный фон вместо градиента */
+  background-color: #92cdff;
+}
+
+.subscribe-form {
+  display: inline-block;
+  width: 549px;
+  min-height: 211px;
+  margin: 5px;
+
+  background-color: #f8f7f4;
+  border-radius: 15px;
+}
+
+.subscribe-message {
+  width: 507px;
+  margin: 0;
+  margin-top: 28px;
+  margin-left: 21px;
+  margin-bottom: 38px;
+  padding: 0;
+}
+
+.subscribe-form input {
+  margin-left: 21px;
+
 }
 
 .subscribe-button,
@@ -426,6 +774,14 @@ background-color: #f8f7f4;
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
+}
+
+.subscribe-button {
+  margin-left: 11px;
+  padding-top: 8px;
+  padding-right: 19px;
+  padding-bottom: 12px;
+  padding-left: 19px;
 }
 
 /* Карта проезда и контактная информация */
@@ -464,11 +820,27 @@ background-color: #f8f7f4;
 /* Хлебные крошки */
 
 .breadcrumbs {
+  display: flex;
+  align-items: baseline;
+  margin: 0;
+  margin-top: 21px;
+  margin-bottom: 2px;
+  padding: 0;
+
   list-style: none;
+
+  /* Временно для сетки */
+  outline: 2px solid deeppink;
 }
+
+.breadcrumbs-item {
+  padding-right: 21px;
+}
+
 
 .breadcrumbs a,
 .breadcrumbs-current {
+
   font-size: 14px;
   font-weight: normal;
   line-height: 16px;
@@ -477,6 +849,9 @@ background-color: #f8f7f4;
 /* Заголовок второстепенной страницы */
 
 .page-title {
+  margin: 0;
+  padding: 0;
+
   font-size: 35px;
   font-weight: 700;
   line-height: 41px;
@@ -599,15 +974,38 @@ a.pagination-item:active {
 
 /* Футер */
 
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 30px;
+
+/* Временно для сетки */
+outline: 2px solid fuchsia;
+}
+
 .footer-social,
 .footer-links {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social {
+  width: 185px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 21px;
+
+  /* Временно для сетки */
+  outline: 2px solid fuchsia;
 }
 
 .social-button {
   display: inline-block;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
 
   font-size: 0px;
   text-align: center;
@@ -630,6 +1028,22 @@ a.pagination-item:active {
   border: 3px solid rgba(255, 255, 255, 0.7);
 }
 
+.footer-links {
+  width: 340px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  max-height: 45px;
+
+  padding-top: 15px;
+  padding-left: 8px;
+ 
+  
+  /* Временно для сетки */
+  outline: 2px solid fuchsia; 
+}
+
 .footer-links a {
   font-size: 13px;
   font-weight: normal;
@@ -639,10 +1053,39 @@ a.important-link {
   font-weight: 700;
 }
 
+.footer-link {
+  position: relative;
+  padding-left: 21px;
+}
+
+.footer-link:first-child::before {
+  position: absolute;
+  content: "";
+  top: 7px;
+  left: 0;
+
+  width: 15px;
+  height: 13px;
+
+  background-image: url(../img/icon-heart.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .footer-copyright {
+  width: 200px;
   font-size: 12px;
   line-height: 18px;
   color: #fefefe;
+
+  /* Временно для сетки */
+  outline: 2px solid fuchsia; 
+}
+
+.footer-copyright-logo {
+  display: inline-block;
+  padding-top: 3px;
+  padding-left: 11px;
 }
 
 .footer-copyright a {
@@ -651,9 +1094,17 @@ a.important-link {
   color: #fefefe;
 }
 
+.footer-copyright p {
+  margin: 0;
+  margin-left: 10px;
+  padding: 0;
+
+}
+
 /* Скрытые окна и заголовки */
 
-.pop-up {
+.pop-up,
+.site-menu-submenu {
   display: none;
 }
 
