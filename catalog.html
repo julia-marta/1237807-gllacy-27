@@ -14,7 +14,7 @@
       </a>
       <nav class="site-navigation">
         <ul class="site-menu">
-          <li><a class="site-menu-item site-menu-current" href="">Каталог</a>
+          <li class="site-menu-item site-menu-current"><a class="site-menu-item-link" href="">Каталог</a>
           <!-- Выпадающий список подменю -->
             <ul class="site-menu-submenu">
               <li class="site-menu-submenu-title">Новинки</li>
@@ -24,8 +24,8 @@
               <li class="site-menu-submenu-item"><a href="#">Мелорин</a></li>
             </ul>
           </li>
-          <li><a class="site-menu-item" href="delivery.html">Доставка и оплата</a></li>
-          <li><a class="site-menu-item" href="company.html">О Компании</a></li>
+          <li class="site-menu-item"><a class="site-menu-item-link" href="#">Доставка и оплата</a></li>
+          <li class="site-menu-item"><a class="site-menu-item-link" href="#">О Компании</a></li>
         </ul>
         <ul class="user-menu">
           <li class="user-menu-item user-menu-search">Поиск
@@ -53,7 +53,7 @@
               <button type="submit">Войти</button>
             </form>
           </li>
-          <li><a class="user-menu-basket user-menu-basket-full" href="order.html">2 товара</a>
+          <li class="user-menu-item user-menu-basket user-menu-basket-full"><a href="#">2 товара</a>
           <!-- Всплывающее окно -->
               <div class="pop-up pop-up-basket-full">
                 <table>
@@ -82,6 +82,7 @@
                 <a href="order.html">Оформить заказ</a>
               </div>
           </li> 
+
         </ul>
       </nav>
       <div class="site-header-information">
@@ -102,7 +103,7 @@
 
         <section class="filter">
             <h2 class="visually-hidden">Фильтр</h2>
-            <form action="https://echo.htmlacademy.ru" method="get">
+            <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
               <fieldset class="filter-sorting">
                   <legend>Сортировка:</legend>
                   <select name="sorting">
@@ -112,26 +113,26 @@
                       <option value="fat">по жирности</option>
                     </select>
               </fieldset>    
-              <fieldset>
+              <fieldset class="filter-price">
                   <legend>Цена: 100 руб. – 500 руб.:</legend>
                 <!-- Здесь будет шкала цены -->
               </fieldset>
               <fieldset class="filter-fatness">
                 <legend>Жирность:</legend>
                 <ul class="filter-fatness-selector">
-                  <li>
+                  <li class="filter-fatness-selector-item">
                     <input type="radio" name="fatness" value="null" id="filter-null">
                     <label for="filter-null">0%</label>
                   </li>
-                  <li>
+                  <li class="filter-fatness-selector-item">
                       <input type="radio" name="fatness" value="lessthan10" id="filter-lessthan10" checked>
                       <label for="filter-lessthan10">до 10%</label>
                   </li>
-                  <li>
+                  <li class="filter-fatness-selector-item">
                       <input type="radio" name="fatness" value="lessthan30" id="filter-lessthan30">
                       <label for="filter-lessthan30">до 30%</label>
                   </li>
-                  <li>
+                  <li class="filter-fatness-selector-item">
                       <input type="radio" name="fatness" value="morethan30" id="filter-morethan30">
                       <label for="filter-morethan30">выше 30%</label>
                   </li>
@@ -140,23 +141,23 @@
               <fieldset class="filter-fillers">
                 <legend>Наполнители:</legend>
                 <ul class="filter-fillers-selector">
-                  <li>
+                  <li class="filter-fillers-selector-item">
                     <input type="checkbox" name="chocolate" id="filter-chocolate" checked>
                     <label for="filter-chocolate">шоколадные</label>
                   </li>
-                  <li>
+                  <li class="filter-fillers-selector-item"> 
                     <input type="checkbox" name="sugar" id="filter-sugar" checked>
                     <label for="filter-sugar">сахарные присыпки</label>
                   </li>
-                  <li>
+                  <li class="filter-fillers-selector-item">
                     <input type="checkbox" name="fruits" id="filter-fruits">
                     <label for="filter-fruits">фрукты</label>
                   </li>
-                  <li>
+                  <li class="filter-fillers-selector-item">
                       <input type="checkbox" name="syrups" id="filter-syrups">
                       <label for="filter-syrups">сиропы</label>
                   </li>
-                  <li>
+                  <li class="filter-fillers-selector-item">
                     <input type="checkbox" name="jams" id="filter-jams">
                     <label for="filter-jams">джемы</label>
                   </li>
@@ -243,36 +244,37 @@
                 </li>
             </ul>
             <ul class="pagination-list">
-                <li><a class="pagination-back">Назад</a></li>
-                <li><a class="pagination-current">1</a></li>
-                <li><a class="pagination-item" href="#">2</a></li>
-                <li><a class="pagination-item" href="#">3</a></li>
-                <li><a class="pagination-item" href="#">4</a></li>
-                <li><a class="pagination-item" href="#">5</a></li>
-                <li><a class="pagination-forward" href="#">Вперёд</a></li>
+                <li class="pagination-item pagination-back"><a>Назад</a></li>
+                <li class="pagination-item pagination-current"><a>1</a></li>
+                <li class="pagination-item"><a href="#">2</a></li>
+                <li class="pagination-item"><a href="#">3</a></li>
+                <li class="pagination-item"><a href="#">4</a></li>
+                <li class="pagination-item"><a href="#">5</a></li>
+                <li class="pagination-item pagination-forward" ><a href="#">Вперёд</a></li>
             </ul>
         </section>
     </main>
 
     <footer class="site-footer container">
       <ul class="footer-social">
-        <li><a class="social-button twitter-button" href="#">Твиттер</a></li>
-        <li><a class="social-button instagram-button" href="#">Инстаграм</a></li>
-        <li><a class="social-button facebook-button" href="#">Фейсбук</a></li>
-        <li><a class="social-button vkontakte-button" href="#">Вконтакте</a></li>
+        <li class="footer-social-link"><a class="social-button twitter-button" href="#">Твиттер</a></li>
+        <li class="footer-social-link"><a class="social-button instagram-button" href="#">Инстаграм</a></li>
+        <li class="footer-social-link"><a class="social-button facebook-button" href="#">Фейсбук</a></li>
+        <li class="footer-social-link"><a class="social-button vkontakte-button" href="#">Вконтакте</a></li>
       </ul>
       <ul class="footer-links">
         <li class="footer-link"><a class="link important-link" href="#">Для поставщиков</a></li>
-        <li class="footer-link"><a class="link" href="#">О производстве</a></li>
         <li class="footer-link"><a class="link" href="#">Наши документы</a></li>
+        <li class="footer-link"><a class="link" href="#">О производстве</a></li>
         <li class="footer-link"><a class="link" href="#">Экологические стандарты</a></li>
       </ul>
       <div class="footer-copyright">
         <a class="footer-copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss">
          <img src="img/htmlacademy-logo.svg" width="108" height="39" alt="Логотип HTML Academy">
         </a>
-        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
+        <p>Сделано в <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
       </div>
     </footer>
+
   </body>
 </html>
