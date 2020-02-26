@@ -84,18 +84,22 @@ a {
 
 .form input::placeholder,
 .form textarea::placeholder {
+  
   font-weight: normal;
   color: #999999;
 }
 
 .form input:hover,
 .form textarea:hover {
+  padding-left: 13px;
   border: 2px solid rgba(154, 154, 154, 0.52);
 }
 
 .form input:focus,
 .form textarea:focus {
+  padding-left: 13px;
   border: 2px solid rgba(46, 136, 228, 0.52);
+  outline: none;
 }
 
 /* Центровщик */
@@ -307,7 +311,7 @@ a {
   border-bottom: none;
 }
 
-.site-menu-item:active> .site-menu-item-link  {
+.site-menu-item:active > .site-menu-item-link  {
   color: #323232;
   border-bottom: none;
 }
@@ -320,20 +324,18 @@ a {
   border-bottom: none;
 }
 
-.site-menu-item:hover .site-menu-submenu,
-.site-menu-item:focus .site-menu-submenu {
-  display: block;
-}
-
 /* Подменю */
 
-.site-menu-submenu {
+.site-menu-submenu-container {
   display: none;
   position: absolute;
-  top: 36px;
+  top: 27px;
   left: -5px;
   z-index: 1;
+  padding-top: 10px;
+}
 
+.site-menu-submenu {
   width: 143px;
   padding: 0;
   padding-top: 10px;
@@ -389,6 +391,11 @@ a {
 
 a.site-menu-submenu-current {
   color: #ffffff;
+}
+
+.site-menu-item:hover .site-menu-submenu-container,
+.site-menu-item:focus .site-menu-submenu-container {
+  display: block;
 }
 
 /* Меню пользователя */
@@ -507,13 +514,16 @@ a.site-menu-submenu-current {
 
 /* Всплывающие окна меню пользователя */
 
-.pop-up {
+.pop-up-container {
   display: none;
   position: absolute;
-  top: 36px;
+  top: 26px;
   right: 0;
   z-index: 1;
+  padding-top: 10px;
+}
 
+.pop-up {
   padding-top: 20px;
 
   background-color: #f8f7f4;
@@ -565,8 +575,7 @@ a.site-menu-submenu-current {
 
 .entrance-links a {
   display: inline-block;
-  margin-left: 20px;
-  
+ 
   font-size: 13px;
   line-height: 22px;
   font-weight: normal;
@@ -582,6 +591,8 @@ a.site-menu-submenu-current {
 }
 
 .entrance-button {
+  margin-right: 19px;
+  
   padding-top: 11px;
   padding-right: 24px;
   padding-bottom: 9px;
@@ -605,9 +616,10 @@ a.site-menu-submenu-current {
 
 .basket-table {
   width: 510px;
-  border-collapse: collapse;
   margin: 0 auto;
-  margin-top: 8px;
+
+  border-collapse: separate;
+  border-spacing: 0px 9px;
 
   font-size: 13px;
   line-height: 16px;
@@ -618,16 +630,11 @@ a.site-menu-submenu-current {
   border: 0;
 }
 
-.basket-table tr:nth-last-child(2) {
-  height: 70px;
-  border-bottom: 1px solid #cacac7;
-}
-
 .basket-table td {
   position: relative;
-  height: 32px;
   vertical-align: top;
-  padding-top: 20px;
+  padding-top: 19px;
+  padding-bottom: 9px;
 }
 
 .basket-delete {
@@ -666,20 +673,23 @@ a.site-menu-submenu-current {
 
 .basket-product-description {
   width: 230px;
-  padding-left: 50px;
+  padding-left: 51px;
 }
 
 .basket-product-description img {
   position: absolute;
-  top: 12px;
+  top: 11px;
   left: 5px;
   display: block;
+
+  width: 33px;
+  height: 33px;
   border-radius: 50%;
 }
 
 .basket-qnty {
   width: 100px;
-  padding-left: 17px;
+  padding-left: 16px;
 }
 
 .basket-qnty span {
@@ -692,12 +702,15 @@ a.site-menu-submenu-current {
 
 td.basket-total {
   padding: 0;
-  padding-top: 14px;
+  padding-top: 13px;
 
   font-size: 15px;
   line-height: 18px;
   font-weight: 700;
   text-align: right;
+
+  border-top: 1px solid #cacac7;
+  
 }
 
 .basket-button {
@@ -715,13 +728,12 @@ td.basket-total {
   color: #fefefe;
 }
 
-
-.user-menu-search:hover .pop-up-search,
-.user-menu-search:focus .pop-up-search,
-.user-menu-entrance:hover .pop-up-entrance,
-.user-menu-entrance:focus .pop-up-entrance,
-.user-menu-basket-full:hover .pop-up-basket-full,
-.user-menu-basket-full:focus .pop-up-basket-full {
+.user-menu-search:hover .search,
+.user-menu-search:focus .search,
+.user-menu-entrance:hover .entrance,
+.user-menu-entrance:focus .entrance,
+.user-menu-basket-full:hover .basket-full,
+.user-menu-basket-full:focus .basket-full {
   display: block;
 }
 
@@ -1213,9 +1225,9 @@ p.contacts-information-phone-info {
 
 .modal-feedback {
   position: fixed;
-  top: 339px;
+  top: 50%;
   left: 50%;
-  margin-left: -220px;
+  transform: translateY(-50%) translateX(-50%);
 
   z-index: 10;
 
@@ -1254,9 +1266,15 @@ p.contacts-information-phone-info {
 
 .feedback-form textarea {
   width: 100%;
+  min-height: 155px;
   padding-top: 7px;
 
   resize: none;
+}
+
+.feedback-form textarea:hover,
+.feedback-form textarea:focus {
+  padding-top: 6px;
 }
 
 .feedback-form-button {
@@ -1362,24 +1380,26 @@ p.contacts-information-phone-info {
 }
 
 .filter-form {
-  width: 865px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
  
+  outline: 2px solid red;
 }
 
 .filter fieldset {
+  position: relative;
   margin: 0;
   margin-right: 14px;
   margin-bottom: 16px;
   padding: 0;
   border: none;
+
 }
 
 .filter legend {
-  margin-bottom: 6px;
+  margin-bottom: 7px;
   margin-left: 16px;
   font-size: 14px;
   font-weight: 500;
@@ -1399,27 +1419,45 @@ p.contacts-information-phone-info {
 }
 
 .filter-sorting select {
-
-  padding-top: 8px;
-  padding-right: 13px;
-  padding-bottom: 8px;
+  padding-top: 9px;
+  padding-right: 29px;
+  padding-bottom: 9px;
   padding-left: 11px;
+
 
   font: inherit;
   font-weight: 500;
   line-height: 18px;
-  
-
   color: #ffffff;
-  background-color: rgba(248, 247, 244, 0.2);
 
+  background-color: rgba(248, 247, 244, 0.2);
   border: none;
+  outline: none;
+  appearance: none;
+  -moz-appearance: none;
+
+  cursor: pointer;
+}
+
+.filter-sorting svg {
+  position: absolute;
+  top: 13px;
+  right: 14px;
+  cursor: pointer;
+}
+
+.filter-sorting svg path {
+  fill: #ffffff;
 }
 
 .filter-sorting select:hover,
 .filter-sorting select:focus {
   color: #323232;
-  background-color: #ffffff;
+}
+
+.filter-sorting select:hover + svg path,
+.filter-sorting select:focus + svg path {
+  fill: #323232;
 }
 
 .filter-price {
@@ -1704,9 +1742,6 @@ a.important-link {
 
 /* Скрытые окна и заголовки */
 
-/* .pop-up {
-  display: none;
-} */
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
