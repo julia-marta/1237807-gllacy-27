@@ -135,35 +135,40 @@
             <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
               <fieldset class="filter-sorting">
                   <legend>Сортировка:</legend>
-                      <select name="sorting">
+                      <select class="filter-sorting-select" name="sorting">
                         <option value="popular">по популярности</option>
                         <option value="cheap">сначала недорогие</option>
                         <option value="expensive">сначала дорогие</option>
                         <option value="fat">по жирности</option>
                       </select>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
-              </fieldset> 
+                    </fieldset> 
               <fieldset class="filter-price">
-                  <legend>Цена: 100 руб. – 500 руб.:</legend>
-                <!-- Здесь будет шкала цены -->
+                  <legend>Цена: 100 руб. – 500 руб.</legend>
+                  <div class="filter-price-controls">
+                    <div class="filter-price-scale">
+                      <div class="filter-price-bar"></div>
+                    </div>
+                    <div class="filter-price-toggle filter-price-toggle-min"></div>
+                    <div class="filter-price-toggle filter-price-toggle-max"></div>
+                  </div>
               </fieldset>
               <fieldset class="filter-fatness">
                 <legend>Жирность:</legend>
                 <ul class="filter-fatness-selector">
                   <li class="filter-fatness-selector-item">
-                    <input type="radio" name="fatness" value="null" id="filter-null">
+                    <input class="visually-hidden filter-fatness-radio" type="radio" name="fatness" value="null" id="filter-null">
                     <label for="filter-null">0%</label>
                   </li>
                   <li class="filter-fatness-selector-item">
-                      <input type="radio" name="fatness" value="lessthan10" id="filter-lessthan10" checked>
+                      <input class="visually-hidden filter-fatness-radio" type="radio" name="fatness" value="lessthan10" id="filter-lessthan10" checked>
                       <label for="filter-lessthan10">до 10%</label>
                   </li>
                   <li class="filter-fatness-selector-item">
-                      <input type="radio" name="fatness" value="lessthan30" id="filter-lessthan30">
+                      <input class="visually-hidden filter-fatness-radio" type="radio" name="fatness" value="lessthan30" id="filter-lessthan30">
                       <label for="filter-lessthan30">до 30%</label>
                   </li>
                   <li class="filter-fatness-selector-item">
-                      <input type="radio" name="fatness" value="morethan30" id="filter-morethan30">
+                      <input class="visually-hidden filter-fatness-radio" type="radio" name="fatness" value="morethan30" id="filter-morethan30">
                       <label for="filter-morethan30">выше 30%</label>
                   </li>
                 </ul>
@@ -172,23 +177,23 @@
                 <legend>Наполнители:</legend>
                 <ul class="filter-fillers-selector">
                   <li class="filter-fillers-selector-item">
-                    <input type="checkbox" name="chocolate" id="filter-chocolate" checked>
+                    <input class="visually-hidden filter-fillers-checkbox" type="checkbox" name="chocolate" id="filter-chocolate" checked>
                     <label for="filter-chocolate">шоколадные</label>
                   </li>
                   <li class="filter-fillers-selector-item"> 
-                    <input type="checkbox" name="sugar" id="filter-sugar" checked>
+                    <input class="visually-hidden filter-fillers-checkbox" type="checkbox" name="sugar" id="filter-sugar" checked>
                     <label for="filter-sugar">сахарные присыпки</label>
                   </li>
                   <li class="filter-fillers-selector-item">
-                    <input type="checkbox" name="fruits" id="filter-fruits">
+                    <input class="visually-hidden filter-fillers-checkbox" type="checkbox" name="fruits" id="filter-fruits">
                     <label for="filter-fruits">фрукты</label>
                   </li>
                   <li class="filter-fillers-selector-item">
-                      <input type="checkbox" name="syrups" id="filter-syrups">
+                      <input class="visually-hidden filter-fillers-checkbox" type="checkbox" name="syrups" id="filter-syrups">
                       <label for="filter-syrups">сиропы</label>
                   </li>
                   <li class="filter-fillers-selector-item">
-                    <input type="checkbox" name="jams" id="filter-jams">
+                    <input class="visually-hidden filter-fillers-checkbox" type="checkbox" name="jams" id="filter-jams">
                     <label for="filter-jams">джемы</label>
                   </li>
                 </ul>
@@ -274,13 +279,13 @@
                 </li>
             </ul>
             <ul class="pagination-list">
-                <li class="pagination-item pagination-back"><a>Назад</a></li>
+                <li class="pagination-back pagination-disabled"><a>Назад</a></li>
                 <li class="pagination-item pagination-current"><a>1</a></li>
                 <li class="pagination-item"><a href="#">2</a></li>
                 <li class="pagination-item"><a href="#">3</a></li>
                 <li class="pagination-item"><a href="#">4</a></li>
                 <li class="pagination-item"><a href="#">5</a></li>
-                <li class="pagination-item pagination-forward" ><a href="#">Вперёд</a></li>
+                <li class="pagination-forward" ><a href="#">Вперёд</a></li>
             </ul>
         </section>
     </main>
