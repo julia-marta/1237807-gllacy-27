@@ -1,16 +1,16 @@
+/* Общие стили */
+
 body {
   margin: 0;
   padding: 0;
-
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
-
   background-color: #849d8f;
 }
 
-/* Скрытые заголовки */
+/* Скрытые элементы */
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -35,7 +35,6 @@ a {
   font-weight: 500;
   line-height: 18px;
   color: #ffffff;
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
  }
 
@@ -43,40 +42,40 @@ a {
 .link:focus,
 .link:active {
   color: #ffbc9e;
-
   border-bottom: 1px solid rgba(249, 172, 159, 0.3);
 }
 
 .button {
   display: inline-block;
-  
   font: inherit;
   font-weight: 700;
   text-align: center;
-  color: #ffffff;
   vertical-align: top;
-
+  color: #ffffff;
   background-color: #f26843;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#e74a35), to(#f26843));
   background-image: linear-gradient(to top, #e74a35, #f26843);
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
   border-radius: 50px;
   border: none;
-
   cursor: pointer;
 }
 
 .button:hover,
 .button:focus {
   color: #fefefe;
-  
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.2))), -webkit-gradient(linear, left bottom, left top, from(#e74a35), to(#f26843));
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
+  -webkit-box-shadow: 0px 2px 2px 0 #ac1000;
   box-shadow: 0px 2px 2px 0 #ac1000;
 }
 
 .button:active {
   color: #fceeec;
-  
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.07)), to(rgba(0, 0, 0, 0.07))), -webkit-gradient(linear, left bottom, left top, from(#e74a35), to(#f26843));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to top, #e74a35, #f26843);
+  -webkit-box-shadow: inset 0px 2px 2px 0 #942718;
   box-shadow: inset 0px 2px 2px 0 #942718;
 }
 
@@ -84,22 +83,26 @@ a {
 
 .form input,
 .form textarea {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 14px;
-
   font: inherit;
   line-height: 24px;
   font-weight: 700;
   color: #323232;
-  
   background-color: #ffffff;
   border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 5px;
 }
 
+.form input::-webkit-input-placeholder, 
+.form textarea::-webkit-input-placeholder,
+.form input::-moz-placeholder, 
+.form textarea::-moz-placeholder,
+.form input::-ms-input-placeholder, 
+.form textarea::-ms-input-placeholder,
 .form input::placeholder,
 .form textarea::placeholder {
-  
   font-weight: normal;
   color: #999999;
 }
@@ -132,7 +135,7 @@ a {
   background-image: url("../img/slide1-ice-cream.png");
   background-repeat: no-repeat;
   background-position: top center;
-
+  -webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
   transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
@@ -154,14 +157,12 @@ a {
   position: relative;
   padding-top: 320px;
   padding-bottom: 42px;
-  
   text-align: center;
 }
 
 .slider-list {
   margin: 0;
   padding: 0;
-
   list-style: none;
 }
 
@@ -173,7 +174,6 @@ a {
   width: 700px;
   margin: 0 auto;
   margin-bottom: 29px;
-
   font-size: 60px;
   font-weight: 700;
   line-height: 60px;
@@ -184,7 +184,6 @@ a {
   padding-bottom: 11px;
   padding-left: 41px;
   padding-right: 41px;
-
   font-size: 32px;
   line-height: 44px;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
@@ -194,7 +193,6 @@ a {
   position: absolute;
   bottom: 63px;
   left: 0;
-  
   font-size: 0;
 }
 
@@ -203,9 +201,7 @@ a {
   width: 17px;
   height: 17px;
   margin-right: 8px;
-
   vertical-align: top;
-
   background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 50%;
@@ -251,6 +247,8 @@ a {
 /* Хедер */
 
 .site-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   padding-top: 9px;
@@ -262,7 +260,11 @@ a {
 }
 
 .site-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
 }
@@ -281,7 +283,11 @@ a {
 /* Главное меню */
 
 .site-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
   min-width: 386px;
   margin: 0;
@@ -296,7 +302,6 @@ a {
   padding-bottom: 6px; 
   padding-left: 14px;
   padding-right: 14px;
-
   border-radius: 20px;
   cursor: pointer;
 }
@@ -317,6 +322,7 @@ a {
 
 .site-menu-item:active {
   background-color: #ededed;
+  -webkit-box-shadow: inset 0px 2px 1px 0 #696969;
   box-shadow: inset 0px 2px 1px 0 #696969;
 }
 
@@ -355,13 +361,12 @@ a {
   padding: 0;
   padding-top: 10px;
   padding-bottom: 9px;
-
   list-style: none;
   font-size: 14px;
   line-height: 16px;
   color: #323232;
-
   background-color: #f8f7f4;
+  -webkit-box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
 }
@@ -375,9 +380,7 @@ a {
   margin-right: 9px;
   padding-left: 14px;
   padding-bottom: 12px;
-
   font-weight: 700;
-
   border-bottom: 1px solid rgba(53, 53, 53, 0.2);
   cursor: default;
 }
@@ -416,8 +419,13 @@ a.site-menu-submenu-current {
 /* Меню пользователя */
 
 .user-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-top: 14px;
   min-width: 263px;
@@ -426,28 +434,22 @@ a.site-menu-submenu-current {
 .user-menu-item {
   display: inline-block;
   position: relative;
-
   height: 17px;
   padding-top: 7px;
   padding-bottom: 8px;
-
   font-size: 14px;  
   font-weight: 500;  
   line-height: 16px;  
   text-align: center;
   vertical-align: middle;   
-  
   background-color: rgba(255, 255, 255, 0.2);
-
   cursor: pointer;
 }
 
 .user-menu-search {
   width: 33px;
   margin-right: 10px;
-
   font-size: 0;
-
   border-radius: 50%;
 }
 
@@ -458,7 +460,6 @@ a.site-menu-submenu-current {
 .user-menu-entrance,
 .user-menu-basket {
   position: relative;
-
   padding-right: 17px;
   padding-left: 44px;
   border-radius: 20px;
@@ -488,14 +489,11 @@ a.site-menu-submenu-current {
 
 .user-menu-basket::before {
   content: "";
-
   position: absolute;
   top: 6px;
   left: 16px;
-
   width: 21px;
   height: 20px;
-
   background-image: url("../img/icon-basket.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -504,7 +502,6 @@ a.site-menu-submenu-current {
 .user-menu-basket-full {
   padding-right: 16px;
   padding-left: 44px;
-
   background-color: #f8f7f4;
 }
 
@@ -514,14 +511,11 @@ a.site-menu-submenu-current {
 
 .user-menu-basket-full::before {
   content: "";
-
   position: absolute;
   top: 6px;
   left: 16px;
-
   width: 21px;
   height: 20px;
-
   background-image: url("../img/icon-basketfull.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -540,8 +534,8 @@ a.site-menu-submenu-current {
 
 .pop-up {
   padding-top: 20px;
-
   background-color: #f8f7f4;
+  -webkit-box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
 }
@@ -554,7 +548,6 @@ a.site-menu-submenu-current {
 .pop-up-search input[type="text"] {
   width: 311px;
   height: 44px;
-
   font-size: 14px;
 }
 
@@ -576,26 +569,29 @@ a.site-menu-submenu-current {
 }
 
 .entrance-user-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
- 
   margin-left: 19px;
   margin-right: 20px;
 }
 
 .entrance-links {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
   order: 2;
   text-align: left;
 }
 
 .entrance-links a {
   display: inline-block;
- 
   font-size: 13px;
   line-height: 22px;
   font-weight: normal;
   text-decoration: underline;
-  
   color: #323232;
 }
 
@@ -607,16 +603,13 @@ a.site-menu-submenu-current {
 
 .entrance-button {
   margin-right: 19px;
-  
   padding-top: 11px;
   padding-right: 24px;
   padding-bottom: 9px;
   padding-left: 24px;
-
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
-
   border-radius: 19px;
 }
 
@@ -625,23 +618,19 @@ a.site-menu-submenu-current {
   min-height: 242px;
   margin: 0;
   padding: 0;
-
   cursor: default;
 }
 
 .basket-table {
   width: 510px;
   margin: 0 auto;
-
   border-collapse: separate;
   border-spacing: 0px 9px;
-
   font-size: 13px;
   line-height: 16px;
   font-weight: normal;
   text-align: left;
   color: #323232;
-
   border: 0;
 }
 
@@ -660,29 +649,29 @@ a.site-menu-submenu-current {
   font-size: 0;
   border: 0;
   background: none;
-
   cursor: pointer;
 }
 
 .basket-delete-button::before,
 .basket-delete-button::after {
   content: "";
-
   position: absolute;
   top: 27px;
   left: 5px;
-
   width: 14px;
   height: 1.5px;
-
   background-color: #323232;
 }
 
 .basket-delete-button::before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .basket-delete-button::after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
@@ -696,7 +685,6 @@ a.site-menu-submenu-current {
   top: 11px;
   left: 5px;
   display: block;
-
   width: 33px;
   height: 33px;
   border-radius: 50%;
@@ -718,26 +706,21 @@ a.site-menu-submenu-current {
 td.basket-total {
   padding: 0;
   padding-top: 13px;
-
   font-size: 15px;
   line-height: 18px;
   font-weight: 700;
   text-align: right;
-
   border-top: 1px solid #cacac7;
-  
 }
 
 .basket-button {
   position: absolute;
   bottom: 21px;
   right: 13px;
-
   padding-top: 9px;
   padding-right: 15px;
   padding-bottom: 11px;
   padding-left: 14px;
-
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
@@ -765,7 +748,6 @@ td.basket-total {
   margin: 0;
   margin-bottom: 5px;
   padding: 0;
-
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
@@ -775,14 +757,17 @@ td.basket-total {
   font-size: 22px;
   font-weight: 700;
   line-height: 24px;
- 
   color: #ffffff;
 }
 
 /* Колонки */
 
 .index-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 40px;
 }
@@ -796,7 +781,6 @@ td.basket-total {
   min-height: 214px;
   padding-top: 15px;
   padding-left: 18px;
-
   background-position: top center;
   background-repeat: no-repeat;
   border-radius: 15px;
@@ -833,12 +817,10 @@ td.basket-total {
   position: absolute;
   bottom: 23px;
   right: 21px;
-
   padding-top: 10px;
   padding-right: 24px;
   padding-bottom: 12px;
   padding-left: 22px;
-
   font-size: 18px;
   line-height: 24px;
 }
@@ -846,31 +828,37 @@ td.basket-total {
 /* Хиты продаж / Виды мороженого */
 
 .product-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .product-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-
   position: relative;
   width: 267px;
   margin-right: 13px;
   margin-left: 13px;
   margin-bottom: 38px;
-
 }
 
 .product-item:hover {
   z-index: 10;
 }
-
 
 .product-item:nth-child(4n) {
   margin-right: 0;
@@ -886,11 +874,10 @@ td.basket-total {
   top: -6px;
   left: -13px;
   display: none;
-
   width: 293px;
   height: 405px;
-
   background-color: rgba(248, 247, 244, 0.2);
+  -webkit-box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
 }
@@ -898,17 +885,16 @@ td.basket-total {
 .product-item:hover::after {
   display: block;
   z-index: 2;
-
 }
 
 .product-button {
+  -webkit-box-ordinal-group: 5;
+  -ms-flex-order: 4;
   order: 4;
   position: absolute;
   bottom: -58px;
   display: none;
- 
   padding: 10px 17px;
-
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
@@ -925,61 +911,51 @@ td.basket-total {
   top: 0;
   left: 0;
   z-index: 4;
-
   display: block;
   width: 61px;
   height: 61px;
-
   background-image: url("../img/icon-hit.svg");
   background-position: center;
   background-repeat: no-repeat; 
 }
 
 .product-list h3 {
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
   order: 3;
   width: 256px;
-
   margin: 0;
   margin-top: 12px;
   padding: 0;
   z-index: 3;
-
   font-size: 16px;
   line-height: 22px;
   text-align: center;
-
 }
 
 .product-img {
   z-index: 3;
-
   border-radius: 50%;
-
 }
 
 .product-price {
   position: absolute;
   top: 210px;
   left: 0;
-
   margin: 0;
   padding: 0;
-
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
-
-  z-index: 3; /* тут */
+  z-index: 3;
 }
 
 .product-price-unit {
   margin: 0;
   padding: 0;
-
   font-size: 30px;
 }
-
 
 /* Преимущества */
 
@@ -987,45 +963,39 @@ td.basket-total {
   width: 1126px;
   min-height: 267px;
   margin-bottom: 40px;
-
   padding-top: 25px;
   padding-left: 20px;
   padding-bottom: 14px;
-
   color: #323232;
-
   background-color: #ebdfc5;
   background-image: url("../img/index-wafbackground.jpg");
   background-position: top center;
   background-repeat: no-repeat;
-
   border-radius: 15px;
 }
 
 .features-title {
   margin: 0;
   margin-bottom: 9px;
-
   font-size: 24px;
   font-weight: 500; 
   line-height: 30px;
-
 }
 
 .features-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-
   margin: 0;
   padding: 0;
-  
   list-style: none;
 }
 
 .feature-item {
   position: relative;
   width: 477px;
-  
   margin-right: 33px;
   padding-top: 11px;
   padding-bottom: 11px;
@@ -1039,14 +1009,11 @@ td.basket-total {
 
 .feature-item::before {
   content: "";
-
   position: absolute;
   top: 0;
   left: 0;
-
   width: 49px;
   height: 49px;
-
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -1078,7 +1045,6 @@ td.basket-total {
 
 .blog-news {
   color: #323232;
-
   background-color: #ffffff;
   background-image: url("../img/index-icebackground.jpg");
   background-position: center;
@@ -1104,19 +1070,16 @@ td.basket-total {
   line-height: 30px;
   text-decoration: underline;
   color: #323232;
-  
 }
 
 .blog-news-title:hover,
 .blog-news-title:focus,
 .blog-news-title:active {
   color: #e84d37;
-
 }
 
 .subscribe {
   color: #5a5a5a;
-
   background-image: repeating-linear-gradient(-45deg, #92cdff 5px, #92cdff 12px, #f8f7f4 12px, #f8f7f4 19px, #fe9e90 19px, #fe9e90 26px, #f8f7f4 26px, #f8f7f4 33px);
 }
 
@@ -1127,7 +1090,6 @@ td.basket-total {
   padding: 0;
   padding-top: 28px;
   padding-left: 21px;
-
   background-color: #f8f7f4;
   border-radius: 15px;
 }
@@ -1135,7 +1097,6 @@ td.basket-total {
 .subscribe-message {
   width: 507px;
   margin: 0;
-
   margin-bottom: 37px;
   padding: 0;
 }
@@ -1144,7 +1105,6 @@ td.basket-total {
   width: 368px;
   height: 44px;
   margin-right: 9px;
-
 }
 
 .subscribe-button,
@@ -1182,13 +1142,10 @@ td.basket-total {
   margin-left: 271px;
   padding-top: 28px;
   padding-left: 25px;
-  
   color: #323232;
-
   background-color: #ffffff;
   border-radius: 15px;
 }
-
 
 .contacts-information a {
   color: #323232;
@@ -1220,9 +1177,7 @@ p.contacts-information-phone-info {
 .contacts-information-phone {
   display: block;
   margin-top: 6px;
-
   margin-bottom: 2px;
-
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
@@ -1239,20 +1194,19 @@ p.contacts-information-phone-info {
 /* Форма обратной связи */
 
 .modal-feedback {
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
   transform: translateY(-50%) translateX(-50%);
-
   z-index: 10;
-
   width: 430px;
   min-height: 428px;
- 
   padding-top: 15px;
-  padding-left: 24px;
+  padding-left: 25px;
   padding-right: 25px;
-
   background-color: #f8f7f4;
   border-radius: 10px;
 }
@@ -1267,10 +1221,8 @@ p.contacts-information-phone-info {
   font-size: 24px;
   line-height: 28px;
   font-weight: 500;
-
   color: #323232;
 }
-
 
 .feedback-form input[type="text"],
 .feedback-form input[type="email"] {
@@ -1278,12 +1230,10 @@ p.contacts-information-phone-info {
   height: 44px;
 }
 
-
 .feedback-form textarea {
   width: 100%;
   min-height: 155px;
   padding-top: 7px;
-
   resize: none;
 }
 
@@ -1296,12 +1246,10 @@ p.contacts-information-phone-info {
   position: absolute;
   bottom: 28px;
   right: 25px;
-
   padding-top: 9px;
   padding-right: 24px;
   padding-bottom: 11px;
   padding-left: 24px;
-
   font-size: 18px;
   line-height: 24px;
 }
@@ -1310,49 +1258,50 @@ p.contacts-information-phone-info {
   position: absolute;
   top: 16px;
   right: 17px;
-
   width: 18px;
   height: 17px;
-
   font-size: 0;
   border: 0;
   background: none;
-
   cursor: pointer;
 }
 
 .modal-close::before,
 .modal-close::after {
   content: "";
-
   position: absolute;
   top: 5px;
   left: -2px;
-
   width: 22px;
   height: 2.5px;
-
   background-color: #323232;
 }
 
 .modal-close::before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .modal-close::after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
 /* Хлебные крошки */
 
 .breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
   align-items: baseline;
   margin: 0;
   margin-top: 21px;
   margin-bottom: 2px;
   padding: 0;
-
   list-style: none;
 }
 
@@ -1382,7 +1331,6 @@ p.contacts-information-phone-info {
   margin: 0;
   margin-bottom: 26px;
   padding: 0;
-
   font-size: 35px;
   font-weight: 700;
   line-height: 41px;
@@ -1395,9 +1343,16 @@ p.contacts-information-phone-info {
 }
 
 .filter-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
 }
 
@@ -1408,7 +1363,6 @@ p.contacts-information-phone-info {
   margin-bottom: 16px;
   padding: 0;
   border: none;
-
 }
 
 .filter-form legend {
@@ -1424,6 +1378,10 @@ p.contacts-information-phone-info {
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   cursor: pointer;
 }
 
@@ -1441,21 +1399,18 @@ p.contacts-information-phone-info {
   padding-right: 29px;
   padding-bottom: 9px;
   padding-left: 11px;
-
   font: inherit;
   font-weight: 500;
   line-height: 18px;
   color: #ffffff;
-
   background-image: url("../img/filter-sorting-select.svg");
   background-position: 168px center;
   background-repeat: no-repeat;
   border: none;
   outline: none;
-  appearance: none;
-  -moz-appearance: none;
   -webkit-appearance: none;
-
+  -moz-appearance: none;
+  appearance: none;
   cursor: pointer;
 }
 
@@ -1469,7 +1424,6 @@ p.contacts-information-phone-info {
   position: relative;
   width: 176px;
   min-height: 20px;
-
   padding-top: 16px;
   padding-left: 21px;
   padding-right: 21px;
@@ -1478,7 +1432,6 @@ p.contacts-information-phone-info {
 .filter-price-scale {
   width: 176px;
   height: 4px;
-
   background-color: rgba(248, 247, 244, 0.5);
 }
 
@@ -1486,7 +1439,6 @@ p.contacts-information-phone-info {
   width: 107px;
   height: 4px;
   margin-left: 16px;
-
   background-color :#f8f7f4;
 }
 
@@ -1496,11 +1448,9 @@ p.contacts-information-phone-info {
   width: 4px;
   height: 4px;
   padding: 0;
-
   border: 8px solid #ffffff;
   background-color: #ababab;
   border-radius: 50%;
-
   cursor: pointer;
 }
 
@@ -1514,17 +1464,18 @@ p.contacts-information-phone-info {
 
 .filter-fatness-selector,
 .filter-fillers-selector {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
-
   margin: 0;
   padding: 0;
-
   padding-top: 6px;
   padding-left: 15px;
   padding-right: 17px;
   padding-bottom: 8px;
-
   list-style: none;
 }
 
@@ -1542,9 +1493,10 @@ p.contacts-information-phone-info {
   position: absolute;
   top: -1px;
   left: -32px;
-
-  width: 15px;
-  height: 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 22px;
+  height: 22px;
   border: 3.5px solid rgba(255, 255, 255, 0.8);
   border-radius: 50%;
 }
@@ -1554,10 +1506,8 @@ p.contacts-information-phone-info {
   position: absolute;
   top: 6px;
   left: -25px;
-
   width: 8px;
   height: 8px;
-
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
 }
@@ -1594,16 +1544,14 @@ p.contacts-information-phone-info {
 .filter-fillers-checkbox + label::before {
   content: "";
   position: absolute;
-  top: -2px;
+  top: -1px;
   left: -33px;
-  
-  width: 23px;
-  height: 23px;
+  width: 20px;
+  height: 20px;
   background-image: url("../img/filter-checkbox-off.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 20px;
-
   opacity: 0.8;
 }
 
@@ -1614,17 +1562,14 @@ p.contacts-information-phone-info {
 .filter-fillers-checkbox:checked + label::after {
   content: "";
   position: absolute;
-  top: -2px;
-  left: -32px;
-
+  top: -1px;
+  left: -33px;
   width: 24px;
-  height: 23px;
-
+  height: 20px;
   background-image: url("../img/filter-checkbox-on.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 24px 20px;
-
   opacity: 0.8;
 }
 
@@ -1643,67 +1588,60 @@ p.contacts-information-phone-info {
 
 .filter-button {
   display: inline-block;
-
   margin-top: 22px;
   padding-top: 7px;
   padding-right: 27px;
   padding-bottom: 7px;
   padding-left: 28px;
-  
   font: inherit;
   font-weight: 500;
   line-height: 18px;
   text-align: center;
   color: #ffffff;
   vertical-align: middle;
-
   background-color: rgba(255, 255, 255, 0.2);
   border: 2px solid  #ffffff;
   border-radius: 20px;
-
 }
 
 .filter-button:hover,
 .filter-button:focus {
   color: #323232;
-
   background-color: #ffffff;
 } 
 
 .filter-button:active {
   color: #323232;
-
   background-color: #ededed;
+  -webkit-box-shadow: inset 0px 2px 1px 0 #696969;
   box-shadow: inset 0px 2px 1px 0 #696969;
 }
 
 /* Пагинатор */
 
 .pagination-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   height: 26px;
   margin: 0;
   margin-top: 44px;
   margin-bottom: 31px;
   padding: 0;
-  
   list-style: none;
 }
 
-
 .pagination-item {
   display: inline-block;
-
-  margin-left: 2px;
-  
   width: 27px;
-  
+  margin-left: 2px;
   text-align: center;
   font-weight: 500;
   line-height: 26px;
   vertical-align: middle;
-
   border-radius: 50%;
 }
 
@@ -1736,7 +1674,6 @@ p.contacts-information-phone-info {
 .pagination-forward {
   position: relative;
   width: 24px;
-
   font-size: 0px;
   cursor: pointer;
 }
@@ -1747,33 +1684,40 @@ p.contacts-information-phone-info {
 .pagination-forward::after {
   content: "";
   position: absolute;
-
   width: 9px;
   height: 2px;
-
   background-color: #ffffff;
 }
+
 .pagination-back::before {
   top: 10px;
   left: 1px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
 .pagination-back::after {
   top: 15px;
   left: 1px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .pagination-forward:before {
   top: 10px;
   right: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .pagination-forward::after {
   top: 15px;
   right: 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
@@ -1793,18 +1737,22 @@ p.contacts-information-phone-info {
   content: "";
   bottom: -30px;
   left: 0;
-
   width: 100%;
   height: 1px;
-
   background-color: rgba(255, 255, 255, 0.3)
 }
 
 /* Футер */
 
 .site-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
   padding-top: 14px;
   padding-bottom: 30px;
@@ -1812,24 +1760,26 @@ p.contacts-information-phone-info {
 
 .footer-social,
 .footer-links {
-  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .footer-social {
-  display: flex;
-  flex-wrap: wrap;
   margin-top: 21px;
   margin-left: 1px;
-
 }
 
-.footer-social-link {
+.footer-social-item {
   margin-right: 11px;
 }
 
-.footer-social-link:nth-child(4n) {
+.footer-social-item:nth-child(4n) {
   margin-right: 0;
 }
 
@@ -1838,16 +1788,13 @@ p.contacts-information-phone-info {
   display: inline-block;
   width: 32px;
   height: 32px;
-  
-  opacity: 0.8;
-
   font-size: 0px;
   text-align: center;
-  color: #849d8f;
   vertical-align: middle;
-
+  color: #849d8f;
   border: 3px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
+  opacity: 0.8;
 }
 
 .social-button svg {
@@ -1869,8 +1816,7 @@ p.contacts-information-phone-info {
 
 .footer-links {
   width: 330px;
-  display: flex;
-  flex-wrap: wrap;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
   margin-top: 15px;
 }
@@ -1888,7 +1834,6 @@ a.important-link {
   min-width: 142px;
   padding-left: 21px;
   position: relative;
-
 }
 
 .footer-link:nth-child(2n) {
@@ -1900,10 +1845,8 @@ a.important-link {
   content: "";
   top: 7px;
   left: 0;
-
   width: 15px;
   height: 13px;
-
   background-image: url("../img/icon-heart.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -1933,4 +1876,3 @@ a.important-link {
   margin-left: 10px;
   padding: 0;
 }
-
