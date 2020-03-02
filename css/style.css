@@ -1234,6 +1234,7 @@ p.contacts-information-phone-info {
 @keyframes shake {
   0%,
   100% {
+    opacity: 1;
     transform: translateY(-50%) translateX(-50%);
   }
 
@@ -1242,6 +1243,7 @@ p.contacts-information-phone-info {
   50%,
   70%,
   90% {
+    opacity: 1;
     transform: translateY(-50%) translateX(-51%);
   }
 
@@ -1249,6 +1251,7 @@ p.contacts-information-phone-info {
   40%,
   60%,
   80% {
+    opacity: 1;
     transform: translateY(-50%) translateX(-49%);
   }
 }
@@ -1287,6 +1290,8 @@ p.contacts-information-phone-info {
 
 .modal-error {
   animation: shake 0.6s;
+  animation-fill-mode: forwards;
+  z-index: 10;
 }
 
 .modal-feedback p {
