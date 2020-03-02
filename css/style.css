@@ -100,7 +100,11 @@ a {
 .form input::-moz-placeholder, 
 .form textarea::-moz-placeholder,
 .form input::-ms-input-placeholder, 
-.form textarea::-ms-input-placeholder,
+.form textarea::-ms-input-placeholder {
+  font-weight: normal;
+  color: #999999;
+}
+
 .form input::placeholder,
 .form textarea::placeholder {
   font-weight: normal;
@@ -1191,6 +1195,44 @@ p.contacts-information-phone-info {
   margin-top: 25px;
 }
 
+/* Анимации */
+
+@keyframes show {
+  0% {
+    transform: translateY(0%) translateX(-50%);
+  }
+
+  70% {
+    transform: translateY(-51%) translateX(-50%);
+  }
+
+  100% {
+    transform: translateY(-50%) translateX(-50%);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateY(-50%) translateX(-51%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateY(-50%) translateX(-49%);
+  }
+}
+
 /* Форма обратной связи */
 
 .modal-feedback {
@@ -1209,6 +1251,15 @@ p.contacts-information-phone-info {
   padding-right: 25px;
   background-color: #f8f7f4;
   border-radius: 10px;
+}
+
+.modal-show {
+  display: block;
+  animation: show 0.4s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal-feedback p {
