@@ -1133,13 +1133,27 @@ td.basket-total {
 
 .contacts-map {
   display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  margin: 0;
+  margin-left: -600px;
+}
+
+.contacts iframe {
+  display: block;
+  position: relative;
+  z-index: 2;
   margin: 0 auto;
+  border: none;
 }
 
 .contacts-information {
   position: absolute;
   top: 62px;
   left: 50%;
+  z-index: 3;
   width: 252px;
   min-height: 277px;
   padding-right: 25px;
