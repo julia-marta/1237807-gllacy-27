@@ -19,7 +19,8 @@
 
   feedback.addEventListener("click", function (evt) {
     evt.preventDefault();
-    popup.classList.add("modal-show");
+    popup.classList.remove("modal-fade-out");
+    popup.classList.add("modal-fade-in");
     if (storageName || storageEmail) {
         userName.value = storageName;
         userEmail.value = storageEmail;
@@ -37,7 +38,8 @@
 
   close.addEventListener("click", function (evt) {
     evt.preventDefault();
-    popup.classList.remove("modal-show");
+    popup.classList.add("modal-fade-out");
+    popup.classList.remove("modal-fade-in");
     popup.classList.remove("modal-error");
   });
 
@@ -57,9 +59,10 @@
 
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
-      if (popup.classList.contains("modal-show")) {
+      if (popup.classList.contains("modal-fade-in")) {
         evt.preventDefault();
-        popup.classList.remove("modal-show");
+        popup.classList.add("modal-fade-out");
+        popup.classList.remove("modal-fade-in");
         popup.classList.remove("modal-error");
     }
   }
