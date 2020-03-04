@@ -96,9 +96,20 @@ a {
 }
 
 .form input::-webkit-input-placeholder, 
-.form textarea::-webkit-input-placeholder,
+.form textarea::-webkit-input-placeholder {
+  font-weight: normal;
+  color: #999999;
+}
 .form input::-moz-placeholder, 
-.form textarea::-moz-placeholder,
+.form textarea::-moz-placeholder {
+  font-weight: normal;
+  color: #999999;
+}
+.form input:-ms-input-placeholder, 
+.form textarea:-ms-input-placeholder {
+  font-weight: normal;
+  color: #999999;
+}
 .form input::-ms-input-placeholder, 
 .form textarea::-ms-input-placeholder {
   font-weight: normal;
@@ -150,11 +161,11 @@ a {
 }
 
 .site-wrapper::before {
-  background-image: url("img/slider-item2.png");
+  background-image: url("../img/slide2-ice-cream.png");
 }
 
 .site-wrapper::after {
-  background-image: url("img/slider-item3.png");
+  background-image: url("../img/slide3-ice-cream.png");
 }
 
 .slider {
@@ -453,7 +464,6 @@ a.site-menu-submenu-current {
 .user-menu-search {
   width: 33px;
   margin-right: 10px;
-  font-size: 0;
   border-radius: 50%;
 }
 
@@ -595,6 +605,7 @@ a.site-menu-submenu-current {
   font-size: 13px;
   line-height: 22px;
   font-weight: normal;
+  vertical-align: middle;
   text-decoration: underline;
   color: #323232;
 }
@@ -650,7 +661,6 @@ a.site-menu-submenu-current {
 }
 
 .basket-delete-button {
-  font-size: 0;
   border: 0;
   background: none;
   cursor: pointer;
@@ -694,12 +704,12 @@ a.site-menu-submenu-current {
   border-radius: 50%;
 }
 
-.basket-qnty {
+.basket-count {
   width: 100px;
   padding-left: 16px;
 }
 
-.basket-qnty span {
+.basket-count span {
   color: #999999;
 }
 
@@ -896,6 +906,7 @@ td.basket-total {
   -ms-flex-order: 4;
   order: 4;
   position: absolute;
+  left: 33px;
   bottom: -58px;
   display: none;
   padding: 10px 17px;
@@ -1190,6 +1201,7 @@ p.contacts-information-phone-info {
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
+  vertical-align: middle;
 }
 
 .contacts-information-phone {
@@ -1357,7 +1369,6 @@ p.contacts-information-phone-info {
   right: 17px;
   width: 18px;
   height: 17px;
-  font-size: 0;
   border: 0;
   background: none;
   cursor: pointer;
@@ -1409,7 +1420,7 @@ p.contacts-information-phone-info {
 
 .breadcrumbs-item::after {
   position: absolute;
-  content: "»";
+  content: "\00BB";
   top: 4px;
   right: 7px;
 }
@@ -1510,6 +1521,10 @@ p.contacts-information-phone-info {
   appearance: none;
   cursor: pointer;
 }
+
+.filter-sorting-select::-ms-expand {
+  display: none;
+  }
 
 .filter-sorting-select:hover,
 .filter-sorting-select:focus {
@@ -1771,7 +1786,6 @@ p.contacts-information-phone-info {
 .pagination-forward {
   position: relative;
   width: 24px;
-  font-size: 0px;
   cursor: pointer;
 }
 
@@ -1885,7 +1899,6 @@ p.contacts-information-phone-info {
   display: inline-block;
   width: 32px;
   height: 32px;
-  font-size: 0px;
   text-align: center;
   vertical-align: middle;
   color: #849d8f;
